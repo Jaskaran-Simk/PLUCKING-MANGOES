@@ -10,6 +10,7 @@ var stone;
 var boy;
 var mango1, mango2, mango3, mango4, mango5;
 var elastic;
+var constraint;
 
 function preload()
 {
@@ -32,7 +33,8 @@ function setup() {
 	mango5 = new Mango(700,280,40);
 
 	//Create the Bodies Here.
-
+        constraint = Constraint.create(stone,boy);
+        World.add(world, constraint)
 
 	Engine.run(engine);
   
